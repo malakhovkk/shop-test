@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/styleHome.sass';
-
+import CategoryItem from '../containers/CategoryItem.js';
+import RotateItem from '../components/RotateItem.jsx';
+import PageItem from '../components/PageItem.jsx';
+import GalleryItem from '../components/GalleryItem.jsx';
 function Home(props) {
 
 const [state, setState] = useState([...props.Category.itemsToDisplay]);
@@ -33,16 +36,16 @@ function getpages()
   }
 }
 
-const setPage  = (e) =>{
-  props.setPage(e.currentTarget.id);
+const setPage  = (page) =>{
+  props.setPage(page);
 }
 
 
 
-const addToCart  = (e) =>{
-  let t = state.find(i => i.id === parseInt(e.currentTarget.id));
+const addToCart  = (id) =>{
+  let t = state.find(i => i.id === parseInt(id));
   console.log("TTTT",t);
-  props.addToCart(e.currentTarget.id, t.itemName, t.price, t.image);
+  props.addToCart(id, t.itemName, t.price, t.image);
 }
 
 
@@ -53,22 +56,7 @@ function showItemsFromPage(page)
   {
     console.log(i);
     thisPage.push(
-  <div className="gallery__item" key={items[i].id}>
-    <div className="gallery__item__block">
-      <div className="gallery__item__left">
-        <div className="gallery__item__image"><img src={items[i].image}/></div>
-      </div>
-      <div className="gallery__item__right">
-        <div className="gallery__item__price">{items[i].price}</div>
-        <div className="gallery__item__name">{items[i].itemName}</div>
-      </div>
-    </div>
-    <div className="gallery__item__cart">
-      <div className="gallery__item__cart__content">
-        <a className="cart" onClick={addToCart} id={items[i].id}>В корзину</a>
-      </div>
-    </div>
-  </div>
+      <GalleryItem id={items[i].id} image={items[i].image} price={items[i].price} itemName={items[i].itemName} addToCart={addToCart}/>
   );
 }
 }
@@ -98,11 +86,11 @@ getpages();
 showItemsFromPage(props.Category.page);
 showCatalogs();
 
-const rotateToCatalog = (e) =>
+const rotateToCatalog = (id) =>
 {
-  console.log(e.currentTarget.id);
+  //console.log(e.currentTarget.id);
   props.history.replace("/category");
-  props.rotate(parseInt(e.currentTarget.id));
+  props.rotate(parseInt(id));
 }
 
 //console.log(thisPage)
@@ -118,7 +106,7 @@ console.log('A',categ);
 
 
           {  categ.map(({i,id})=>{
-            return (<div className='title__navigation__item' id={id} onClick={rotateToCatalog} key={id}>   {i} /</div>);
+            return(<RotateItem  id={id} rotateToCatalog={rotateToCatalog} key={id} i={i}/>);
             })
           }
 
@@ -149,7 +137,7 @@ console.log('A',categ);
       <div className="pages">
       {
         pag.map(i=>{
-          return <div className="pages__item" key={i} id={i} onClick={setPage}>{i}</div>
+          return <PageItem i={i} setPage={setPage}/>
         })
       }
       </div>

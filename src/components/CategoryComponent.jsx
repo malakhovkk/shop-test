@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/styleHome.sass';
-
+import CategoryItem from '../containers/CategoryItem.js';
+import RotateItem from '../components/RotateItem.jsx';
 function Home(props) {
 
   let price = 0;
@@ -36,46 +37,33 @@ let cart = props.Category.cart;
     {
       console.log(items[i].id);
       thisPage.push(
-    <div className="gallery__item"  key={items[i].id}>
-      <div className="gallery__item__block">
-        <div className="gallery__item__left">
-          <div className="gallery__item__image"><img src={items[i].image}/></div>
-        </div>
-        <div className="gallery__item__right">
-          <div className="gallery__item__name">{items[i].category}</div>
-        </div>
-      </div>
-      <div className="gallery__item__cart">
-        <div className="gallery__item__cart__content" id={i}  onClick={setCategory}>
-          <a className="cart" >Перейти</a>
-        </div>
-      </div>
-    </div>
+        <CategoryItem  id={items[i].id}  image={items[i].image} category={items[i].category} num={i} setCategory={setCategory}/>
     );
   }
 
   else props.history.replace("/home");
 
   }
-  const setCategory = (e) => {
+  const setCategory = (id) => {
 
-    let id = e.currentTarget.id;
-    console.log("id",id)
-    props.pushToCategories(parseInt(id));
+//    let id = e.currentTarget.id;
+// let id = e.currentTarget.id;
+//    console.log("id",id)
+   props.pushToCategories(parseInt(id));
 
 
 
-    props.history.replace("/home");
+   props.history.replace("/home");
   }
   const moveToCart = (e) =>
   {
     props.history.replace("/cart");
   }
-  const rotateToCatalog = (e) =>
+  const rotateToCatalog = (id) =>
   {
     props.history.replace("/home");
-    console.log("EEE",e.currentTarget.id);
-    props.rotate(parseInt(e.currentTarget.id));
+    //console.log("EEE",e.currentTarget.id);
+    props.rotate(parseInt(id));
   }
   showItemsFromPage();
   return (
@@ -90,7 +78,9 @@ let cart = props.Category.cart;
 
 
                 {  categ.map(({i,id})=>{
-                  return (<div className='title__navigation__item' id={id} onClick={rotateToCatalog} key={id}>   {i} /</div>);
+                  return(<RotateItem  id={id} rotateToCatalog={rotateToCatalog} key={id} i={i}/>);
+
+                //  return (<div className='title__navigation__item' id={id} onClick={rotateToCatalog} key={id}>   {i} /</div>);
                   })
                 }
 
