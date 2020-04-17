@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap')
+.cart
+  display: flex
+  justify-content: center
+  flex-direction: column
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: center
+    &__delete
+        img
+          width: 30px
+          cursor: pointer
+    &__image
+      img
+        width: 70px
+    &__delete
+      width: 10px
+      margin-top: 10px
+    &__plus
+      cursor: pointer
+      font-weight: 700
+      color: white
+      text-decoration: none
+      padding: 5px 15px
+      border-radius: 3px
+      background: rgb(64,199,129)
+      transition: 0.2s
+      margin-right: 5px
+
+      &:hover
+        background: rgb(53, 167, 110)
+
+    &__minus
+      cursor: pointer
+      font-weight: 700
+      color: white
+      text-decoration: none
+      padding: 5px 15px
+      border-radius: 3px
+      background: rgb(64,199,129)
+      transition: 0.2s
+
+      &:hover
+        background: rgb(53, 167, 110)
+    &__left
+      margin-right: 10px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    &__changeAmount
+      display: flex
+
+
+  &__return
+    padding-bottom: 10px
+    a
+      cursor: pointer
+      font-weight: 700
+      color: white
+      text-decoration: none
+      padding: 5px 15px
+      border-radius: 3px
+      background: rgb(64,199,129)
+      transition: 0.2s
+
+      &:hover
+        background: rgb(53, 167, 110)
+.title
+  font-family: 'Girassol', cursive
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  &__cartInfo
+    margin-left: 10px
+  &__right
+    margin-right: 30vw
+    display: flex
+    flex-direction: row
+
+  &__cart
+    cursor: pointer
+    img
+      width: 25px
+  &__left
+        display: flex
+        flex-direction: row
+        align-items: center
+  &__name
+    margin-left: 10px
+    font-family: 'Pacifico', cursive
+  &__navigation
+    text-transform: uppercase
+    display: flex
+    flex-direction: row
+    margin-left: 10px
+    &__item
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+
+.gallery
+  font-family: 'Orbitron', sans-serif
+  display: flex
+  flex-wrap: wrap
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 24%
+    //border-radius: 9px 30px 18px 3px
+    padding-top: 5px
+    &:nth-child(4n + 1)
+          margin-left: 10px
+    &__image
+      img
+        width: 70px
+    &__left
+
+    &__right
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 2px
+      padding-right: 55%
+    &__block
+      display: flex
+      flex-direction: row
+    &__name
+      color: #005bff
+    &__cart
+      &__content
+        display: flex
+        justify-content: flex-start
+        a
+            cursor: pointer
+            font-weight: 700
+            color: white
+            text-decoration: none
+            padding: 5px 15px
+            border-radius: 3px
+            background: rgb(64,199,129)
+            transition: 0.2s
+            &:hover
+              background: rgb(53, 167, 110)
+.pages
+  display: flex
+  flex-direction: row
+  justify-content: center
+  &__item
+    cursor: pointer
+    margin-top: 20px
+    margin-left: 40px
+    margin-bottom: 10px

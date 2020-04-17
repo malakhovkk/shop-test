@@ -1,0 +1,306 @@
+  [{
+    "id":1000,
+    "category":"Электроника",
+    "image": "item.png",
+    "items":
+    [
+      {
+        "id": 100,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 1,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 2,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 3,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 4,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 5,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 6,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 7,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 8,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 9,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 10,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 11,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 12,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 13,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 14,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 15,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 16,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 17,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 18,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 19,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 20,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 21,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 22,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 23,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 24,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 25,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 26,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 27,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 28,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 29,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 30,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 31,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 32,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 33,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 34,
+        "itemName": "Флеш-накопитель 512 GB",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 35,
+        "itemName": "Геймпад Razer",
+        "price": 5000,
+        "image": "item.png"
+      },
+      {
+        "id": 36,
+        "itemName": "Чехол от iPhone",
+        "price": 1000,
+        "image": "item.png"
+      },
+      {
+        "id": 37,
+        "itemName": "Геймпад Logitech",
+        "price": 2000,
+        "image": "item.png"
+      },
+      {
+        "id": 38,
+        "itemName": "Геймпад Razer",
+        "price": 2500,
+        "image": "item.png"
+      }
+    ],
+    "categories":
+    [
+      {
+      "id":101,
+      "category": "Ноутбуки",
+      "image": "item.png",
+      "items":[
+          {
+            "id": 39,
+            "itemName": "Ноутбук HP",
+            "price": 40000,
+            "image": "item.png"
+          },
+          {
+            "id": 40,
+            "itemName": "Ноутбук Asus",
+            "price": 45000,
+            "image": "item.png"
+          }
+        ],
+      "categories":
+      [{
+        "id":102,
+        "category": "Apple",
+        "image": "item.png",
+        "items":[
+          {
+            "id": 41,
+            "itemName": "MacBook Air",
+            "price": 120000,
+            "image": "item.png"
+          },
+          {
+            "id": 42,
+            "itemName": "MacBook Pro",
+            "price": 230000,
+            "image": "item.png"
+          }
+        ]
+      }]
+    },
+      {
+        "id":103,
+        "category":"Телефоны",
+        "image": "item.png",
+
+        "items":[
+          {
+            "id": 43,
+            "itemName": "iPhone 11 Pro",
+            "price": 90000,
+            "image": "item.png"
+          },
+          {
+            "id": 44,
+            "itemName": "Samsung Galaxy S10",
+            "price": 70000,
+            "image": "item.png"
+          }
+        ]
+
+
+    }
+  ]
+  }]
