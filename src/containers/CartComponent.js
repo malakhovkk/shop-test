@@ -1,59 +1,54 @@
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import CartComponent from '../components/CartComponent';
 
 
-
 const mapStateToProps = (state) => {
-    console.log("СОСТОЯНИЕ",state);
-    return {
-      cart:state.Category.cart
-    }
+  console.log('СОСТОЯНИЕ', state);
+  return {
+    cart: state.Category.cart,
+  };
   //  return {cart:state.cart};
 };
 
 
-function addToCart(id,name,price,image){
+function addToCart(id, name, price, image) {
   return {
-    type:"ADD_TO_CART",
+    type: 'ADD_TO_CART',
     payload:
-    {id,name,price,image}
-  }
+    {id, name, price, image},
+  };
 }
 
-function removeFromCart(id){
+function removeFromCart(id) {
   return {
-    type:"REMOVE_FROM_CART",
+    type: 'REMOVE_FROM_CART',
     payload:
-    {id}
-  }
+    {id},
+  };
 }
 
-function removeAll(id)
-{
+function removeAll(id) {
   return {
-    type:"REMOVE_ALL_FROM_CART",
+    type: 'REMOVE_ALL_FROM_CART',
     payload:
-    {id}
-  }
+    {id},
+  };
 }
 function mapDispatchToProps(dispatch) {
   return {
-    addToCart:(id,name,price,image) =>
-    {
-      dispatch(addToCart(id,name,price,image))
+    addToCart: (id, name, price, image) => {
+      dispatch(addToCart(id, name, price, image));
     },
-    removeFromCart:(id) =>
-    {
-      dispatch(removeFromCart(id))
+    removeFromCart: (id) => {
+      dispatch(removeFromCart(id));
     },
-    removeAllFromCart:(id) =>
-    {
-      dispatch(removeAll(id))
-    }
-  }
+    removeAllFromCart: (id) => {
+      dispatch(removeAll(id));
+    },
+  };
 }
 
 export default connect(
-  mapStateToProps, mapDispatchToProps
+    mapStateToProps, mapDispatchToProps,
 )(CartComponent);
