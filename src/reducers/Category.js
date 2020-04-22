@@ -29,8 +29,8 @@ export default (state = initialState, action) => {
       };
     case 'PUSH_CATEGORY':
     {
-      const initState = {...state, categories: [...state.categories, action.payload.id]};
-      let items2 = {...initState};
+      const initState = { ...state, categories: [...state.categories, action.payload.id] };
+      let items2 = { ...initState };
       console.log(initState);
       items2 = items2.items[0];
       console.log(items2);
@@ -54,15 +54,15 @@ export default (state = initialState, action) => {
       const res = [];
       console.log('Action.payload=', action.payload);
       console.log('State=', state);
-      const items = {...state};
+      const items = { ...state };
       console.log('Items', items.categories[0]);
       console.log('Items', items.categories[1]);
       for (let i = 0; i <= action.payload; i++) {
         res.push(items.categories[i]);
       }
       console.log(res);
-      const initState = {...state, categories: res};
-      let items2 = {...initState};
+      const initState = { ...state, categories: res };
+      let items2 = { ...initState };
       console.log(items2);
       items2 = items2.items[0];
       for (let i = 1; i < initState.categories.length; i++) {
@@ -78,11 +78,11 @@ export default (state = initialState, action) => {
       };
     }
     case 'ADD_TO_CART':
-    {const cart = state.cart;
+    { const { cart } = state;
       console.log(cart);
       if (cart && cart.length > 0) {
         console.log(cart);
-        const it = cart.find((i) =>i.id === action.payload.id);
+        const it = cart.find((i) => i.id === action.payload.id);
         const res = cart.filter((i) => i.id !== action.payload.id);
 
 
@@ -93,42 +93,46 @@ export default (state = initialState, action) => {
             ...state,
             cart: [
               ...res,
-              {id: action.payload.id,
+              {
+                id: action.payload.id,
                 count: it.count + 1,
                 image: action.payload.image,
                 name: action.payload.name,
-                price: action.payload.price},
-            ],
-          };
-        } else {
-          return {
-            ...state,
-            cart: [
-              ...res,
-              {id: action.payload.id,
-                count: 1,
-                image: action.payload.image,
-                name: action.payload.name,
-                price: action.payload.price},
+                price: action.payload.price,
+              },
             ],
           };
         }
-      } else {
         return {
           ...state,
           cart: [
-            {id: action.payload.id,
+            ...res,
+            {
+              id: action.payload.id,
               count: 1,
               image: action.payload.image,
               name: action.payload.name,
-              price: action.payload.price},
+              price: action.payload.price,
+            },
           ],
         };
       }
+      return {
+        ...state,
+        cart: [
+          {
+            id: action.payload.id,
+            count: 1,
+            image: action.payload.image,
+            name: action.payload.name,
+            price: action.payload.price,
+          },
+        ],
+      };
     }
     case 'REMOVE_FROM_CART':
-    {const cart = state.cart;
-      const it = cart.find((i) =>i.id === action.payload.id);
+    { const { cart } = state;
+      const it = cart.find((i) => i.id === action.payload.id);
       const res = cart.filter((i) => i.id !== action.payload.id);
       let nextCount;
       if (it.count === 1) {
@@ -136,26 +140,25 @@ export default (state = initialState, action) => {
           ...state,
           cart: [...res],
         };
-      } else {
-        return {
-          ...state,
-          cart: [
-            ...res,
-            {
-              id: action.payload.id,
-              count: it.count - 1,
-              image: it.image,
-              name: it.name,
-              price: it.price,
-            },
-
-          ],
-        };
       }
+      return {
+        ...state,
+        cart: [
+          ...res,
+          {
+            id: action.payload.id,
+            count: it.count - 1,
+            image: it.image,
+            name: it.name,
+            price: it.price,
+          },
+
+        ],
+      };
     }
     case 'REMOVE_ALL_FROM_CART':
     {
-      const cart = state.cart;
+      const { cart } = state;
       const res = cart.filter((i) => i.id !== action.payload.id);
       console.log(res);
       return {

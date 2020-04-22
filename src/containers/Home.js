@@ -1,5 +1,5 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Home from '../components/Home';
 
 
@@ -28,7 +28,9 @@ function addToCart(id, name, price, image) {
   return {
     type: 'ADD_TO_CART',
     payload:
-    {id, name, price, image},
+    {
+      id, name, price, image,
+    },
   };
 }
 
@@ -47,5 +49,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-    mapStateToProps, mapDispatchToProps,
+  mapStateToProps, mapDispatchToProps,
 )(Home);

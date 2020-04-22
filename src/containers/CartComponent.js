@@ -1,5 +1,5 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import CartComponent from '../components/CartComponent';
 
 
@@ -16,7 +16,9 @@ function addToCart(id, name, price, image) {
   return {
     type: 'ADD_TO_CART',
     payload:
-    {id, name, price, image},
+    {
+      id, name, price, image,
+    },
   };
 }
 
@@ -24,7 +26,7 @@ function removeFromCart(id) {
   return {
     type: 'REMOVE_FROM_CART',
     payload:
-    {id},
+    { id },
   };
 }
 
@@ -32,7 +34,7 @@ function removeAll(id) {
   return {
     type: 'REMOVE_ALL_FROM_CART',
     payload:
-    {id},
+    { id },
   };
 }
 function mapDispatchToProps(dispatch) {
@@ -50,5 +52,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-    mapStateToProps, mapDispatchToProps,
+  mapStateToProps, mapDispatchToProps,
 )(CartComponent);

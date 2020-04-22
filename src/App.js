@@ -5,7 +5,7 @@ import './style.sass';
 import Home from './containers/Home';
 import CategoryComponent from './containers/CategoryComponent';
 import CartComponent from './containers/CartComponent';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import {
   Switch,
@@ -24,8 +24,8 @@ function App() {
         <Switch>
           <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
-          <Route exact path='/category' component={CategoryComponent}/>
-          <Route exact path='/cart' component={CartComponent}/>
+          <Route exact path="/category" component={CategoryComponent} />
+          <Route exact path="/cart" component={CartComponent} />
         </Switch>
       </BrowserRouter>
     </div>

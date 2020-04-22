@@ -4,8 +4,7 @@
         "es6": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "google"
+        "airbnb", "airbnb/hooks"
     ],
     "globals": {
         "Atomics": "readonly",

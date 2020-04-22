@@ -1,5 +1,5 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import CategoryItem from '../components/CategoryItem.jsx';
 
 
@@ -46,5 +46,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-    mapStateToProps, mapDispatchToProps,
+  mapStateToProps, mapDispatchToProps,
 )(CategoryItem);
