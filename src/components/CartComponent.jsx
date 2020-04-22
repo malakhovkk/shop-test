@@ -1,45 +1,44 @@
 import React, { useState } from 'react';
 import '../styles/styleHome.sass';
-import CartItem from '../components/CartItem.jsx';
-function CartComponent(props) {
+import CartItem from './CartItem.jsx';
 
-  let cart = props.cart;
+function CartComponent(props) {
+  const { cart } = props;
 
   console.log(cart);
 
   const returnTo = () => {
     props.history.replace('/home');
-  }
+  };
 
 
   const increase = (id) => {
-    let it = cart.find(i =>i.id === id);
+    const it = cart.find((i) => i.id === id);
     console.log(it);
     props.addToCart(it.id, it.name, it.price, it.image);
 
   //  props.history.replace('/home');
-  }
+  };
 
   const decrease = (id) => {
-//    props.history.replace('/home');
+    //    props.history.replace('/home');
     props.removeFromCart(id);
-  }
+  };
 
-const remove = (id) => {
-  console.log("REMOVE");
-//    props.history.replace('/home');
-  props.removeAllFromCart(id);
-}
+  const remove = (id) => {
+    console.log('REMOVE');
+    //    props.history.replace('/home');
+    props.removeAllFromCart(id);
+  };
   return (
     <div>
-      <div className='title'>
-        <div className='title__left'>
-          <div className='title__name'>
+      <div className="title">
+        <div className="title__left">
+          <div className="title__name">
             <h2>Shop</h2>
           </div>
 
         </div>
-
 
 
       </div>
@@ -49,12 +48,10 @@ const remove = (id) => {
           <a onClick={returnTo}>Вернуться</a>
         </div>
         <div>
-        {
-          cart.map(i=>{
-            return(
-              <CartItem id={i.id} name={i.name} price={i.price} count={i.count} increase={increase} decrease={decrease} remove={remove} image={i.image}/>
-            )
-          })
+          {
+          cart.map((i) => (
+            <CartItem id={i.id} name={i.name} price={i.price} count={i.count} increase={increase} decrease={decrease} remove={remove} image={i.image} />
+          ))
         }
         </div>
       </div>
