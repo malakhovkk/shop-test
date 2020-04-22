@@ -5,19 +5,6 @@ function CategoryItem(props) {
 
 
 let  {id, image,category, num, setCategory} = props;
-//  id = props.id;
-//  image = props.image;
-// category = props.category;
-//  image = props.image;
-//  const setCategory = () => {
-
-  //  let id = e.currentTarget.id;
-//  let id = e.currentTarget.id;
-//    props.pushToCategories(parseInt(num));
-
-//    console.log(props);
-//    props.history.replace("/home");
- //}
 
   return (
     <div className="gallery__item"  key={id}>
