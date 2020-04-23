@@ -6,9 +6,6 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log('State', state);
-  console.log('Action', action);
-
 
   switch (action.type) {
     case 'SET_INFO':
@@ -31,17 +28,11 @@ export default (state = initialState, action) => {
     {
       const initState = { ...state, categories: [...state.categories, action.payload.id] };
       let items2 = { ...initState };
-      console.log(initState);
       items2 = items2.items[0];
-      console.log(items2);
-      //  items2[0].categories[0].categories[0]
 
       for (let i = 1; i < initState.categories.length; i++) {
-        console.log(items2);
         items2 = items2.categories[initState.categories[i]];
-        console.log(items2);
       }
-      console.log('1', items2);
       return {
         ...state,
         page: 1,
@@ -52,25 +43,16 @@ export default (state = initialState, action) => {
     case 'ROTATE_CATALOG':
     {
       const res = [];
-      console.log('Action.payload=', action.payload);
-      console.log('State=', state);
       const items = { ...state };
-      console.log('Items', items.categories[0]);
-      console.log('Items', items.categories[1]);
       for (let i = 0; i <= action.payload; i++) {
         res.push(items.categories[i]);
       }
-      console.log(res);
       const initState = { ...state, categories: res };
       let items2 = { ...initState };
-      console.log(items2);
       items2 = items2.items[0];
       for (let i = 1; i < initState.categories.length; i++) {
-        console.log(items2);
         items2 = items2.categories[initState.categories[i]];
-        console.log(items2);
       }
-      console.log('2', items2);
       return {
         ...state,
         categories: res,
@@ -78,16 +60,11 @@ export default (state = initialState, action) => {
       };
     }
     case 'ADD_TO_CART':
-    { const { cart } = state;
-      console.log(cart);
+    {
+      const { cart } = state;
       if (cart && cart.length > 0) {
-        console.log(cart);
         const it = cart.find((i) => i.id === action.payload.id);
         const res = cart.filter((i) => i.id !== action.payload.id);
-
-
-        console.log('res', res);
-        if (it) console.log(it.count);
         if (it) {
           return {
             ...state,

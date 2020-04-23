@@ -4,11 +4,9 @@ import CartComponent from '../components/CartComponent';
 
 
 const mapStateToProps = (state) => {
-  console.log('СОСТОЯНИЕ', state);
   return {
     cart: state.Category.cart,
   };
-  //  return {cart:state.cart};
 };
 
 

@@ -5,7 +5,6 @@ import CartItem from './CartItem.jsx';
 function CartComponent(props) {
   const { cart } = props;
 
-  console.log(cart);
 
   const returnTo = () => {
     props.history.replace('/home');
@@ -14,20 +13,14 @@ function CartComponent(props) {
 
   const increase = (id) => {
     const it = cart.find((i) => i.id === id);
-    console.log(it);
     props.addToCart(it.id, it.name, it.price, it.image);
-
-  //  props.history.replace('/home');
   };
 
   const decrease = (id) => {
-    //    props.history.replace('/home');
     props.removeFromCart(id);
   };
 
   const remove = (id) => {
-    console.log('REMOVE');
-    //    props.history.replace('/home');
     props.removeAllFromCart(id);
   };
   return (

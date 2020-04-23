@@ -16,23 +16,18 @@ function Home(props) {
       price += cart[i].count * cart[i].price;
     }
   }
-  console.log(props);
 
 
   function showItemsFromPage() {
-    console.log('items', items);
     for (let i = 0; i < props.Category.categories.length; i++) {
-      console.log(items[props.Category.categories[i]]);
       categ.push({
         i: items[props.Category.categories[i]].category,
         id: i,
       });
       items = items[props.Category.categories[i]].categories;
     }
-    console.log(items);
     if (items) {
       for (let i = 0; i < items.length; i++) {
-        console.log(items[i].id);
         thisPage.push(
           <CategoryItem id={items[i].id} image={items[i].image} category={items[i].category} num={i} setCategory={setCategory} />,
         );
@@ -40,12 +35,7 @@ function Home(props) {
     } else props.history.replace('/home');
   }
   const setCategory = (id) => {
-    //    let id = e.currentTarget.id;
-    // let id = e.currentTarget.id;
-    //    console.log("id",id)
     props.pushToCategories(parseInt(id));
-
-
     props.history.replace('/home');
   };
   const moveToCart = (e) => {
@@ -53,7 +43,6 @@ function Home(props) {
   };
   const rotateToCatalog = (id) => {
     props.history.replace('/home');
-    // console.log("EEE",e.currentTarget.id);
     props.rotate(parseInt(id));
   };
   showItemsFromPage();
@@ -69,7 +58,6 @@ function Home(props) {
 
             { categ.map(({ i, id }) => (<RotateItem id={id} rotateToCatalog={rotateToCatalog} key={id} i={i} />),
 
-              //  return (<div className='title__navigation__item' id={id} onClick={rotateToCatalog} key={id}>   {i} /</div>);
             )}
 
 

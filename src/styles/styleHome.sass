@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap')
+
+body
+  background-color:#f5f4f0
+.basis
+  width: 80%
+  margin: 0 auto
+
 .cart
   display: flex
   justify-content: center
@@ -107,15 +114,17 @@
   font-family: 'Orbitron', sans-serif
   display: flex
   flex-wrap: wrap
+  margin-top: 20px
   &__item
+    padding: 10px
+    box-sizing: border-box
     display: flex
     flex-direction: column
     justify-content: flex-start
-    width: 24%
-    //border-radius: 9px 30px 18px 3px
+    width: 25%
     padding-top: 5px
     &:nth-child(4n + 1)
-          margin-left: 10px
+          padding-left: 10px
     &__image
       img
         width: 70px

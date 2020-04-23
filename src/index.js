@@ -11,7 +11,6 @@ import _items from './shop.json';
 
 const store = createStore(rootReducer);
 
-// console.log(_items)
 store.dispatch(getItems(_items));
 store.dispatch(
   {
