@@ -9,8 +9,6 @@ function Home(props) {
   const [state, setState] = useState([...props.Category.itemsToDisplay]);
 
 
-  console.log('HOME PROPS', props);
-  console.log('STATE', state);
   const items = props.Category.itemsToDisplay;
   const { cart } = props.Category;
   let count = 0;
@@ -22,8 +20,6 @@ function Home(props) {
     }
   }
 
-  // console.log(price);
-  console.log(props.Category.items);
   const pagesNum = (items.length + 11) / 12;
   const { pages } = props.Category;
   const pag = [];
@@ -40,7 +36,6 @@ function Home(props) {
 
   const addToCart = (id) => {
     const t = state.find((i) => i.id === parseInt(id));
-    console.log('TTTT', t);
     props.addToCart(id, t.itemName, t.price, t.image);
   };
 
@@ -48,7 +43,6 @@ function Home(props) {
   const thisPage = [];
   function showItemsFromPage(page) {
     for (let i = (page - 1) * 12; i <= (page - 1) * 12 + 11 && i < items.length; i++) {
-      console.log(i);
       thisPage.push(
         <GalleryItem id={items[i].id} image={items[i].image} price={items[i].price} itemName={items[i].itemName} addToCart={addToCart} />,
       );
@@ -57,10 +51,8 @@ function Home(props) {
 
   const categ = [];
   function showCatalogs() {
-    console.log(props.Category);
     let items2 = props.Category.items;
     for (let i = 0; i < props.Category.categories.length; i++) {
-      console.log(items2[props.Category.categories[i]]);
       categ.push({ i: items2[props.Category.categories[i]].category, id: i });
       items2 = items2[props.Category.categories[i]].categories;
     }
@@ -77,13 +69,10 @@ function Home(props) {
   showCatalogs();
 
   const rotateToCatalog = (id) => {
-  // console.log(e.currentTarget.id);
     props.history.replace('/category');
     props.rotate(parseInt(id));
   };
 
-  // console.log(thisPage)
-  console.log('A', categ);
   return (
     <div>
       <div className="title">
@@ -113,17 +102,19 @@ function Home(props) {
 
 
       </div>
-      <div className="gallery">
-        {
+      <div className="basis">
+        <div className="gallery">
+          {
             thisPage.map((i) => i)
           }
 
 
-      </div>
-      <div className="pages">
-        {
-        pag.map((i) => <PageItem i={i} setPage={setPage} />)
-      }
+        </div>
+        <div className="pages">
+          {
+            pag.map((i) => <PageItem i={i} setPage={setPage} />)
+          }
+          </div>
       </div>
     </div>
 
