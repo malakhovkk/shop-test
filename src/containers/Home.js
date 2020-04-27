@@ -3,55 +3,51 @@ import { bindActionCreators } from 'redux';
 import Home from '../components/Home';
 
 
-
 const mapStateToProps = (state) => ({
-   ...state
+  ...state,
 });
 
-function setPage(page)
-{
+function setPage(page) {
   return {
-    type:"CHANGE_PAGE",
+    type: 'CHANGE_PAGE',
     payload:
     {
-      page
-    }
-  }
+      page,
+    },
+  };
 }
 
-function rotate(num)
-{
+function rotate(num) {
   return {
-    type:"ROTATE_CATALOG",
-    payload:  num
-  }
+    type: 'ROTATE_CATALOG',
+    payload: num,
+  };
 }
 
-function addToCart(id,name,price,image){
+function addToCart(id, name, price, image) {
   return {
-    type:"ADD_TO_CART",
+    type: 'ADD_TO_CART',
     payload:
-    {id,name,price,image}
-  }
+    {
+      id, name, price, image,
+    },
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    setPage: (page) =>
-    {
+    setPage: (page) => {
       dispatch(setPage(page));
     },
-    rotate:(num) =>
-    {
-      dispatch(rotate(num))
+    rotate: (num) => {
+      dispatch(rotate(num));
     },
-    addToCart:(id,name,price,image) =>
-    {
-      dispatch(addToCart(id,name,price,image))
-    }
-  }
+    addToCart: (id, name, price, image) => {
+      dispatch(addToCart(id, name, price, image));
+    },
+  };
 }
 
 export default connect(
-  mapStateToProps, mapDispatchToProps
+  mapStateToProps, mapDispatchToProps,
 )(Home);
