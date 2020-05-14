@@ -8,13 +8,13 @@
         "id": 100,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 1,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 2,
@@ -26,19 +26,19 @@
         "id": 3,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 4,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 5,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 6,
@@ -50,13 +50,13 @@
         "id": 7,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 8,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 9,
@@ -68,19 +68,19 @@
         "id": 10,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 11,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 12,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 13,
@@ -92,19 +92,19 @@
         "id": 14,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 15,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 16,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 17,
@@ -116,19 +116,19 @@
         "id": 18,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 19,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 20,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 21,
@@ -140,19 +140,19 @@
         "id": 22,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 23,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 24,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 25,
@@ -164,13 +164,13 @@
         "id": 26,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 27,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 28,
@@ -182,19 +182,19 @@
         "id": 29,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 30,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 31,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 32,
@@ -206,19 +206,19 @@
         "id": 33,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 34,
         "itemName": "Флеш-накопитель 512 GB",
         "price": 2000,
-        "image": "item.png"
+        "image": "flash.jpg"
       },
       {
         "id": 35,
         "itemName": "Геймпад Razer",
         "price": 5000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 36,
@@ -230,13 +230,13 @@
         "id": 37,
         "itemName": "Геймпад Logitech",
         "price": 2000,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       },
       {
         "id": 38,
         "itemName": "Геймпад Razer",
         "price": 2500,
-        "image": "item.png"
+        "image": "gamepad.jpg"
       }
     ],
     "categories":
@@ -244,38 +244,38 @@
       {
       "id":101,
       "category": "Ноутбуки",
-      "image": "item.png",
+      "image": "hp.jpg",
       "items":[
           {
             "id": 39,
             "itemName": "Ноутбук HP",
             "price": 40000,
-            "image": "item.png"
+            "image": "hp.jpg"
           },
           {
             "id": 40,
             "itemName": "Ноутбук Asus",
             "price": 45000,
-            "image": "item.png"
+            "image": "hp.jpg"
           }
         ],
       "categories":
       [{
         "id":102,
         "category": "Apple",
-        "image": "item.png",
+        "image": "mac.jpg",
         "items":[
           {
             "id": 41,
             "itemName": "MacBook Air",
             "price": 120000,
-            "image": "item.png"
+            "image": "mac.jpg"
           },
           {
             "id": 42,
             "itemName": "MacBook Pro",
             "price": 230000,
-            "image": "item.png"
+            "image": "mac.jpg"
           }
         ]
       }]
@@ -296,7 +296,7 @@
             "id": 44,
             "itemName": "Samsung Galaxy S10",
             "price": 70000,
-            "image": "item.png"
+            "image": "samsung.jpg"
           }
         ]
 

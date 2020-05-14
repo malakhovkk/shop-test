@@ -34,7 +34,7 @@ function Home(props) {
       for (let i = 0; i < items.length; i++) {
         console.log(items[i].id);
         thisPage.push(
-          <CategoryItem id={items[i].id} image={items[i].image} category={items[i].category} num={i} setCategory={setCategory} />,
+          <CategoryItem key={items[i].id} id={items[i].id} image={items[i].image} category={items[i].category} num={i} setCategory={setCategory} />,
         );
       }
     } else props.history.replace('/home');

@@ -52,7 +52,7 @@ const remove = (id) => {
         {
           cart.sort((a,b) => a.id - b.id).map(i=>{
             return(
-              <CartItem id={i.id} name={i.name} price={i.price} count={i.count} increase={increase} decrease={decrease} remove={remove} image={i.image}/>
+              <CartItem key={i.id} id={i.id} name={i.name} price={i.price} count={i.count} increase={increase} decrease={decrease} remove={remove} image={i.image}/>
             )
           })
         }

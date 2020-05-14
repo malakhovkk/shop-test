@@ -50,7 +50,7 @@ function Home(props) {
     for (let i = (page - 1) * 12; i <= (page - 1) * 12 + 11 && i < items.length; i++) {
       console.log(i);
       thisPage.push(
-        <GalleryItem id={items[i].id} image={items[i].image} price={items[i].price} itemName={items[i].itemName} addToCart={addToCart} />,
+        <GalleryItem key={items[i].id} id={items[i].id} image={items[i].image} price={items[i].price} itemName={items[i].itemName} addToCart={addToCart} />,
       );
     }
   }
@@ -122,7 +122,7 @@ function Home(props) {
       </div>
       <div className="pages">
         {
-        pag.map((i) => <PageItem i={i} setPage={setPage} />)
+        pag.map((i) => <PageItem key={i} i={i} setPage={setPage} />)
       }
       </div>
     </div>
